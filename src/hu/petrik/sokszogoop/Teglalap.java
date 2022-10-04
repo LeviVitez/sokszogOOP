@@ -1,8 +1,7 @@
 package hu.petrik.sokszogoop;
+public class Teglalap extends Sokszog{
 
-public class Teglalap extends Sokszog {
     private double b;
-
     public Teglalap(double a, double b) {
         super(a);
         this.b = b;
@@ -17,18 +16,17 @@ public class Teglalap extends Sokszog {
     }
 
     public double getKerulet(){
-        /*
-        jelenleg super.getA() is ugyan azt eredményezi
-        */
-        return 2*(this.getA()+this.b);
+        //jelenleg super.getA() is ugyan azt eredmenyezi.
+        return 2 * (this.getA() + this.b);
     }
-
-    public double getTerulet(){
-        return this.getA()*this.b;
+    @Override
+    public double getTerulet() {
+        return this.getA()* this.b;
     }
 
     @Override
     public String toString() {
-        return String.format("téglalap: a = %f - b = %f - K = %f - T = %f",this.getA(),this.getB(),this.getKerulet(),this.getTerulet());
+        return String.format("Téglalap: a = %f - b = %f - K = %f - T = %f", this.getA(), this.getB(), this.getKerulet(), this.getTerulet());
     }
 }
+
